@@ -13,6 +13,7 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
             integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
             crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/static/libs/font-awesome-4.7.0/css/font-awesome.min.css">
     {% block extra_head %}{% endblock %}
 </head>
 
@@ -36,34 +37,15 @@
             </div>
 
             <div id="navbar" class="navbar-collapse collapse">
-                <a href="/tebio/" class="pull-left"><img src="/tebio/static/img/tebio-logo-base.png" height="50"></a>
+                <a href="http://sysos.eng.ox.ac.uk/tebio/" class="pull-left"><img src="/static/img/tebio-logo-base.png" height="50"></a>
 
                 <ul class="nav navbar-nav">
 
-                    <li class=""><a href="/tebio/">Home</a></li>
+                    <li class=""><a href="/about">About</a></li>
+                    <li class=""><a href="/upload">Upload file(s)</a></li>
+                    <li class=""><a href="https://github.com/jamesscottbrown/sbml-diff"><i class="fa fa-github"></i></a></li>
 
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">SBML-diff <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/tebio/sbml-diff">About</a></li>
-                            <li><a href="/tebio/upload">Web interface</a></li>
-                            <li><a href="https://github.com/jamesscottbrown/sbml-diff">Github</a></li>
-                        </ul>
-                    </li>
-
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true"
-                           aria-expanded="false">TEBio-fit <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/tebio/tebio-fit">About</a></li>
-                            <li><a href="/tebio/tebiofit-form">Web config file converter</a></li>
-                            <li><a href="/tebio/static/tebiofit-demo/comparison.html?experiment=modelComparison">Demo</a></li>
-                            <li><a href="https://github.com/jamesscottbrown/tebio-fit">Github</a></li>
-                        </ul>
-                    </li>
-
-                    <li><a href="mailto:james@jamesscottbrown.com">Contact</a></li>
+                    <li><a href="mailto:james@jamesscottbrown.com"><i class="fa fa-envelope"></i></a></li>
 
                 </ul>
             </div><!--/.nav-collapse -->

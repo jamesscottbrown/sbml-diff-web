@@ -231,7 +231,7 @@ def page_homepage():
     return redirect('/upload')
 
 
-@app.route('/sbml-diff')
+@app.route('/about')
 def page_sbml_diff():
     return render_template('sbml-diff.html')
 

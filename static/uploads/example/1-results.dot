@@ -1,0 +1,52 @@
+
+
+
+digraph comparison {
+rankdir = TB;
+
+
+subgraph cluster_cell {
+graph[style=dotted];
+label="cell";
+"PZ" [color="#377eb8",label="cI protein"   , style="invis,"];
+"PX" [color="grey",label="LacI protein"   , style=""];
+"PY" [color="grey",label="TetR protein"   , style=""];
+"Y" [color="grey",label="TetR mRNA"   , style=""];
+"X" [color="grey",label="LacI mRNA"   , style=""];
+"Z" [color="#377eb8",label="cI mRNA"   , style="invis,"];
+Reaction2 [shape="rectangle", color="grey",  label=<<br/>(<font color='grey'>IR</font>)> , style=""];
+Y -> Reaction2 [color="grey", style=""];
+Reaction3 [shape="rectangle", color="#377eb8",  label=<<br/>(<font color='#377eb8'>IR</font>)> , style="invis,"];
+Z -> Reaction3 [color="#377eb8", style="invis,"];
+Reaction1 [shape="rectangle", color="grey",  label=<<br/>(<font color='grey'>IR</font>)> , style=""];
+X -> Reaction1 [color="grey", style=""];
+Reaction10 [shape="rectangle", color="grey",  label=<<br/>(<font color='grey'>IR</font>)> , style="dashed"];
+Reaction10 -> X [color="grey", style=""];
+Reaction7 [shape="rectangle", color="grey",  label=<<br/>(<font color='grey'>IR</font>)> , style=""];
+PX -> Reaction7 [color="grey", style=""];
+Reaction4 [shape="rectangle", color="grey",  label=<<br/>(<font color='grey'>IR</font>)> , style=""];
+Reaction4 -> PX [color="grey", style=""];
+Reaction5 [shape="rectangle", color="grey",  label=<<br/>(<font color='grey'>IR</font>)> , style=""];
+Reaction5 -> PY [color="grey", style=""];
+Reaction8 [shape="rectangle", color="grey",  label=<<br/>(<font color='grey'>IR</font>)> , style=""];
+PY -> Reaction8 [color="grey", style=""];
+Reaction9 [shape="rectangle", color="#377eb8",  label=<<br/>(<font color='#377eb8'>IR</font>)> , style="invis,"];
+PZ -> Reaction9 [color="#377eb8", style="invis,"];
+Reaction12 [shape="rectangle", color="#377eb8",  label=<<br/>(<font color='#377eb8'>IR</font>)> , style="invis,"];
+Reaction12 -> Z [color="#377eb8", style="invis,"];
+Reaction6 [shape="rectangle", color="#377eb8",  label=<<br/>(<font color='#377eb8'>IR</font>)> , style="invis,"];
+Reaction6 -> PZ [color="#377eb8", style="invis,"];
+Reaction11 [shape="rectangle", color="grey",  label=<<br/>(<font color='grey'>IR</font>)> , style=""];
+Reaction11 -> Y [color="grey", style=""];
+"PY" -> "Reaction10" [color="#e41a1c", arrowhead="tee" , style="bold,dashed"];
+"X" -> "Reaction4" [color="grey", arrowhead="vee" , style="dashed"];
+"PX" -> "Reaction11" [color="grey", arrowhead="tee" , style="dashed"];
+"Z" -> "Reaction6" [color="#377eb8", arrowhead="vee" , style="invis,dashed"];
+"PZ" -> "Reaction10" [color="#377eb8", arrowhead="tee" , style="invis,dashed"];
+"PY" -> "Reaction12" [color="#377eb8", arrowhead="tee" , style="invis,dashed"];
+"Y" -> "Reaction5" [color="grey", arrowhead="vee" , style="dashed"];
+
+
+}
+label=<Files: <font color='#e41a1c'>1_toggle.xml</font>, <font color='#377eb8'>2_repressilator.xml</font>>;
+}

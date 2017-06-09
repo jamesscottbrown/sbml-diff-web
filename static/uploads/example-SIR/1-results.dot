@@ -1,0 +1,43 @@
+
+
+
+digraph comparison {
+rankdir = TB;
+
+
+subgraph cluster_World {
+graph[style=dotted];
+label="World";
+"I" [color="grey",label="I"   , style=""];
+"S" [color="grey",label="S"   , style=""];
+"R" [color="grey",label="R"   , style=""];
+"L" [color="#377eb8",label="L"   , style="invis,"];
+recoveredDeath [shape="rectangle", color="grey",  label=<<br/>(<font color='grey'>IR</font>)> , style=""];
+R -> recoveredDeath [color="grey", style=""];
+Recovery [shape="rectangle", color="grey",  label=<<br/>(<font color='grey'>IR</font>)> , style=""];
+I -> Recovery [color="grey", style=""];
+Recovery -> R [color="grey", style=""];
+susDeath [shape="rectangle", color="grey",  label=<<br/>(<font color='grey'>IR</font>)> , style=""];
+S -> susDeath [color="grey", style=""];
+latentDeath [shape="rectangle", color="#377eb8",  label=<<br/>(<font color='#377eb8'>IR</font>)> , style="invis,"];
+L -> latentDeath [color="#377eb8", style="invis,"];
+transitionFromLatencyToInfective [shape="rectangle", color="#377eb8",  label=<<br/>(<font color='#377eb8'>IR</font>)> , style="invis,"];
+L -> transitionFromLatencyToInfective [color="#377eb8", style="invis,"];
+transitionFromLatencyToInfective -> I [color="#377eb8", style="invis,"];
+Infection [shape="rectangle", color="grey",  label=<<br/>(<font color='grey'>IR</font>)> , style=""];
+S -> Infection [color="grey", style=""];
+Infection -> I [color="black", style="bold,"];
+Infection -> L [color="#377eb8", style="invis,"];
+infectedDeath [shape="rectangle", color="grey",  label=<<br/>(<font color='grey'>IR</font>)> , style=""];
+I -> infectedDeath [color="grey", style=""];
+Birth [shape="rectangle", color="grey",  label=<<br/>(<font color='grey'>IR</font>)> , style=""];
+Birth -> S [color="grey", style=""];
+RecoveredToSusceptible [shape="rectangle", color="#4daf4a",  label=<<br/>(<font color='#4daf4a'>IR</font>)> , style="invis,"];
+R -> RecoveredToSusceptible [color="#4daf4a", style="invis,"];
+RecoveredToSusceptible -> S [color="#4daf4a", style="invis,"];
+"I" -> "Infection" [color="grey", arrowhead="vee" , style="dashed"];
+
+
+}
+label=<Files: <font color='#e41a1c'>1_SIRModel1.xml</font>, <font color='#377eb8'>2_SIRModel2.xml</font>, <font color='#4daf4a'>3_SIRModel3.xml</font>>;
+}

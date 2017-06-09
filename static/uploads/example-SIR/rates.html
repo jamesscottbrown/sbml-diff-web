@@ -1,0 +1,12 @@
+<table>
+<tr><th>Reaction                        </th><th>1_SIRModel1.xml          </th><th>2_SIRModel2.xml          </th><th>3_SIRModel3.xml          </th></tr>
+<tr><td>Birth                           </td><td>World * birth            </td><td>World * birth            </td><td>World * birth            </td></tr>
+<tr><td>Infection                       </td><td>World * infection * S * I</td><td>World * infection * S * I</td><td>World * infection * S * I</td></tr>
+<tr><td>RecoveredToSusceptible          </td><td>-                        </td><td>-                        </td><td>World * reSusceptible * R</td></tr>
+<tr><td>Recovery                        </td><td>World * recovery * I     </td><td>World * recovery * I     </td><td>World * recovery * I     </td></tr>
+<tr><td>infectedDeath                   </td><td>World * I * death        </td><td>World * I * death        </td><td>World * I * death        </td></tr>
+<tr><td>latentDeath                     </td><td>-                        </td><td>World * L * death        </td><td>-                        </td></tr>
+<tr><td>recoveredDeath                  </td><td>World * R * death        </td><td>World * R * death        </td><td>World * R * death        </td></tr>
+<tr><td>susDeath                        </td><td>World * S * death        </td><td>World * S * death        </td><td>World * S * death        </td></tr>
+<tr><td>transitionFromLatencyToInfective</td><td>-                        </td><td>World * transition * L   </td><td>-                        </td></tr>
+</table>

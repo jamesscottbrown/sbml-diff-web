@@ -1,0 +1,11 @@
+sbmldiff:
+  build: .
+  volumes:
+    - .:/code
+  ports:
+    - "4004:5000"
+  restart: always
+  environment:
+    FLASK_DEBUG: 0
+  working_dir: /code
+  command: gunicorn -w 4 -b 0.0.0.0:5000 tebio:app
